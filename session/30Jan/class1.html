@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class student{
+            constructor(name,roll){
+                this.name=name;
+                this.roll=roll;
+            }
+            
+        }
+        const stu=new student('rushabh',22);
+        document.writeln("Name: "+stu.name)
+        document.writeln("Rollno: "+stu.roll+"<br>")
+
+        
+        
+        
+    </script>
+</head>
+<body>
+   <p id="result">Result here</p>
+<script>
+    let resultElement = document.getElementById("result");
+    resultElement.innerHTML = ""; // Clear previous content
+
+    for(let i = 1; i <= 10; i++) {
+        const multiply = (x) => x * i;
+        resultElement.innerHTML += `5 * ${i} = ${multiply(5)}<br>`;
+    }
+</script>
+
+
+</script>
+</body>
+</html>

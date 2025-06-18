@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Radio Button Example</title>
+    <script src="./Myscript.js"></script>
+    <style>
+      #result {
+        font-size: 25px;
+        padding: 20px;
+      }
+    </style>
+    <script>
+        function myfun() {
+            let selected = document.querySelector('input[name="loc"]:checked'); // Get selected radio button
+            if (selected) {
+                document.getElementById('result').innerHTML = "You have selected: " + selected.value;
+            } else {
+                document.getElementById('result').innerHTML = "Please select a location.";
+            }
+        }
+        function checkRadio(r){
+            document.getElementById('result').innerHTML=r.value;
+        }
+        // function checkRadio(){
+        //     const ary=document.getElementsByName('loc');
+        //     const res=document.getElementById('result');
+        //     let str="";
+        //     for(r of ary){
+        //         str+=r.value+" "+r.checked+ "<br>";
+        //     }
+        //     res.innerHTML=str;
+        // }
+        // hello()
+        printDayOfWeek()
+    </script>
+</head>
+<body>
+    <form action="#">
+        <input type="radio" name="loc" value="Ahilaynagar" onclick="myfun()"> Ahilaynagar
+        <input type="radio" name="loc" value="Pune" onclick="myfun()"> Pune
+        <input type="radio" name="loc" value="Chhatrapati Sambhaji Nagar" onclick="myfun()"> Chhatrapati Sambhaji Nagar
+        <input type="radio" name="loc" value="Vambori" onclick="checkRadio(this)"> Vambori
+        <br>
+        <div id="result">
+            Result will be shown here
+        </div>
+    </form>
+</body>
+</html>

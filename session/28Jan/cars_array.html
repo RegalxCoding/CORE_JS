@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cars and Prices</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      width: 50%;
+      margin: 20px auto;
+      text-align: left;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+    }
+    th {
+      background-color: #f4f4f4;
+    }
+  </style>
+</head>
+<body>
+  <table>
+    <thead>
+      <tr>
+        <th>Car</th>
+        <th>Price</th>
+      </tr>
+    </thead>
+    <tbody id="carTableBody">
+      <!-- Table rows will be added here dynamically -->
+    </tbody>
+  </table>
+
+  <script>
+    // Arrays for cars and their prices
+    const cars = ["Tesla Model S", "Ford Mustang", "Kia", "BMW 3 Series", "Xuv700"];
+    const prices = ["8,00,000", "55,000,00", "40,000,00", "42,000,00", "39,000,00"];
+
+    // Get the table body element
+    const carTableBody = document.getElementById("carTableBody");
+
+    // Iterate through the arrays and create rows
+    for (let i = 0; i < cars.length; i++) {
+      const row = document.createElement("tr");
+
+      // Create car name cell
+      const carCell = document.createElement("td");
+      carCell.textContent = cars[i];
+      row.appendChild(carCell);
+
+      // Create price cell
+      const priceCell = document.createElement("td");
+      priceCell.textContent = prices[i];
+      row.appendChild(priceCell);
+
+      // Append the row to the table body
+      carTableBody.appendChild(row);
+    }
+  </script>
+</body>
+</html>

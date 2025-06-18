@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Person{
+           constructor(){
+            this.name="rushabh";
+            this.mobile=392392030;
+            this.email="rush@gmail.com";
+           }
+        getpersonaldetails(){
+            return(`<h3>${p1.name}, ${p1.mobile}, ${p1.email}</h3>`)
+        }
+
+        }
+    </script>
+</head>
+<body>
+  <h2>Person class demo</h2>
+  <script>
+    const p1=new Person();
+    document.write(
+        `<h1> ${p1.name}, ${p1.mobile}, ${p1.email}</h1>`
+    );
+    p1.name="gojo";
+    document.write(
+        `<h1> ${p1.name}, ${p1.mobile}, ${p1.email}</h1>`
+    );
+    document.write(p1.getpersonaldetails());
+
+  </script>
+</body>
+</html>

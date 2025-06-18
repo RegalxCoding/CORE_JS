@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Operations</title>
+    <link rel="stylesheet" href="./form.css">
+    <script>
+       
+        function displayKey(event){
+            let keyPressed = event.key;
+            let asciiValue = event.keyCode || event.which;
+            document.getElementById("keyInfo").innerHTML = 
+                "<h3>Key Pressed: " + keyPressed + " (ASCII: " + asciiValue + ")</h3>";
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <form action="#" onsubmit="return false;">
+            <h2>BASIC OPERATIONS</h2>
+            
+            <label>Enter text:</label>
+            <input type="number" id="num1" onkeydown="displayKey(event)" onblur="alert('going out of textbox')" >
+            
+            <div id="result">
+                <h2>Result will be shown here</h2>
+            </div>
+
+            <div id="keyInfo">
+                <h3>Press any key to see its ASCII value</h3>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

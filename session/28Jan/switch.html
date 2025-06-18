@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch Case Example</title>
+    <link rel="stylesheet" href="./form.css">
+    <script>
+        function Generate(){
+            const d1=document.getElementById("day")
+
+            ch=d1.value.toLowerCase();
+            switch(ch){
+                case"monday":
+                    document.getElementById('result').innerHTML="<h2>Poha</h2>";
+                    break;
+                case"tuesday":document.getElementById('result').innerHTML="<h2>Idli</h2>";
+                break;
+                case "wednesday":
+                    document.getElementById('result').innerHTML="<h2>Aalo ka Paratha</h2>";
+                break;
+                case "thursday":
+                    document.getElementById('result').innerHTML="<h2>Upma</h2>";
+                break;
+                case "friday":
+                    document.getElementById('result').innerHTML="<h2>wada sambar</h2>";
+                break;
+                case "saturday":
+                    document.getElementById('result').innerHTML="<h2>shabudane ki khicdi</h2>";
+                break;
+                case "default":
+                    document.getElementById('result').innerHTML="<h2>Invalid Day</h2>";
+                break
+
+
+            }
+        }
+    </script>
+</head>
+<body>
+    <div class="form-container">
+        <form action="#">  
+            <h2>ENTER DAY OF WEEK</h2>
+        
+            <input type="text" id="day">
+            <!-- <input type="number" id="num2"> -->
+            <button type="submit" onclick="Generate()">Generate</button><br>
+            <!-- <button type="submit" onclick="Descending()">Descending</button><br> -->
+            
+            <div id="result">
+               
+            </div>
+
+        </form>
+</body>
+</html>

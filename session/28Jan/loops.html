@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./form.css">
+    <script>
+      function Generate(){
+        const a=document.getElementById("num1");
+        const b=document.getElementById("num2");
+        let num1=parseInt(a.value);
+        let num2=parseInt(b.value);
+        let res=document.getElementById("result")
+        if(num1<=num2){
+        for(let i=num1;i<=num2;i++){
+           document.writeln("<h3> i="+i+"</h2><br>")
+        }
+         }else{
+            for(let i=num1;i>=num2;i--){
+           document.writeln("<h3> i="+i+"</h2><br>")
+
+            }
+         }
+    
+        
+      }
+    </script>
+</head>
+<body>
+        
+    <div class="form-container">
+        <form action="#">  
+            <h2>BASIC OPERATIONS</h2>
+        
+            <input type="number" id="num1">
+            <input type="number" id="num2">
+            <button type="submit" onclick="Generate()">Generate</button><br>
+            <!-- <button type="submit" onclick="Descending()">Descending</button><br> -->
+            
+            <div id="result">
+                result will be shown here
+            </div>
+
+        </form>

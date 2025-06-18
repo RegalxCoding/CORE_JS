@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Regex Validation</title>
+</head>
+<body>
+
+    <h2>Enter Text (Letter followed by a Digit)</h2>
+    <form onsubmit="return validateInput()">
+        <input type="text" id="textInput" placeholder="e.g., A1, b9">
+        <button type="submit">Submit</button>
+        <p id="message" style="color: red;"></p>
+    </form>
+
+    <script>
+        function validateInput() {
+            const pattern = /^[0-9].*[0-9]$/; // Letter followed by a digit
+            const input = document.getElementById("textInput").value;
+            const message = document.getElementById("message");
+
+            if (pattern.test(input)) {
+                message.style.color = "green";
+                message.textContent = "valid input!";
+
+                return false;
+            } else {
+                message.style.color = "red";
+                message.textContent = "Invalid input! It should start with a digit then followed by letter followed and in end digit.";
+                return false;
+            }
+        }
+    </script>
+
+</body>
+</html>

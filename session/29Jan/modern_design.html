@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Key Press ASCII Viewer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Poppins', sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: radial-gradient(circle at center, #111, #000);
+            color: white;
+            text-align: center;
+            overflow: hidden;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+            backdrop-filter: blur(10px);
+            width: 90%;
+            max-width: 450px;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        h2 {
+            font-size: 24px;
+            margin-bottom: 20px;
+            color: #0ff;
+            text-shadow: 0 0 5px #0ff, 0 0 10px #0ff;
+        }
+        .key-box {
+            font-size: 40px;
+            font-weight: bold;
+            padding: 15px 30px;
+            margin: 15px;
+            border-radius: 15px;
+            background: rgba(0, 255, 255, 0.2);
+            display: inline-block;
+            min-width: 80px;
+            border: 2px solid rgba(0, 255, 255, 0.5);
+            box-shadow: 0 0 15px rgba(0, 255, 255, 0.6);
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .key-box.active {
+            transform: scale(1.2);
+            box-shadow: 0 0 25px rgba(0, 255, 255, 1);
+        }
+        .key-box:empty {
+            display: none;
+        }
+        p {
+            margin-top: 10px;
+            font-size: 16px;
+            color: rgba(255, 255, 255, 0.7);
+        }
+        /* Glowing animation */
+        @keyframes glow {
+            0% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+            50% { text-shadow: 0 0 20px #0ff, 0 0 40px #0ff; }
+            100% { text-shadow: 0 0 5px #0ff, 0 0 10px #0ff; }
+        }
+        h2, .key-box {
+            animation: glow 2s infinite alternate;
+        }
+    </style>
+    <script>
+        document.addEventListener("keydown", function(event) {
+            let keyPressed = event.key === " " ? "Space" : event.key; // Show "Space" instead of blank
+            let asciiValue = event.keyCode || event.which;
+
+            document.getElementById("key-name").textContent = keyPressed;
+            document.getElementById("ascii-value").textContent = asciiValue;
+
+            let boxes = document.querySelectorAll(".key-box");
+            boxes.forEach(box => {
+                box.classList.add("active");
+                setTimeout(() => box.classList.remove("active"), 200);
+            });
+
+            // Small vibration effect
+            document.querySelector(".container").style.transform = "scale(1.05)";
+            setTimeout(() => {
+                document.querySelector(".container").style.transform = "scale(1)";
+            }, 150);
+        });
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h2>Press Any Key</h2>
+        <div class="key-box" id="key-name"></div>
+        <div class="key-box" id="ascii-value"></div>
+        <p>Key Value & ASCII Code will appear here</p>
+    </div>
+</body>
+</html>

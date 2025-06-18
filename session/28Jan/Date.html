@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <script>
+        const dob=new Date(2000,0,29);
+        let dMonth=dob.getMonth();
+        let dYear=dob.getFullYear();
+        let dDate=dob.getDate();
+        const curDate=new Date();
+        let cDate=curDate.getDate();
+        let cMonth=curDate.getMonth();
+        let cYear=curDate.getFullYear();
+    </script>
+
+    <h3>
+        date:<script>document.write(cDate)</script>
+        <script>
+            document.write(`
+            <br>Month:${cMonth+1}
+            <br>Year:${cYear}`);
+        </script>
+
+    </h3>
+    <h1>
+        <script>
+            let str="";
+            if(cDate==dDate && cMonth==dMonth){
+                str="Yes its your birthday today<br>happy birthday..."
+            }
+            else{
+                str="No it still time for your birthday";
+            }
+
+            document.write(str);
+        </script>
+    </h1>
+</body>
+</html>
