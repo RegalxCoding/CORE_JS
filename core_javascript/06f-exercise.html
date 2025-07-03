@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coin Flip</title>
+
+</head>
+<body>
+    <h2>Coin Flipper</h2>
+    <button onclick="
+        const randomNumber=Math.random();
+        let result1='';
+        let guess1='heads';
+        let msg1='';
+        if(randomNumber<1/2){
+            result1='heads';
+        }else{
+            result1='tails';
+        }
+        
+        if(guess1==result1){
+            msg1=`YOU WIN. IT WAS A ${result1}`;
+        }else{
+            msg1=`YOU LOSE. IT WAS A ${result1}`;
+        }
+        alert(`${msg1}`);
+        ">Head</button>
+    <button onclick="
+        const randomNumber2=Math.random();
+        let guess2='tails';
+        let result2='';
+        let msg2='';
+        if(randomNumber2<1/2){
+            result2='heads';
+        }else{
+            result2='tails';
+        }
+        guess2='tails';
+
+        if(guess2==result2){
+            msg2=`YOU WIN. IT WAS A ${result2}`;
+        }else{
+            msg2=`YOU LOSE. IT WAS A ${result2}`;
+        }
+        alert(`${msg2}`);
+    ">tail</button>
+    <script>
+        // const randomNumber=Math.random();
+        
+    </script>
+</body>
+</html>
