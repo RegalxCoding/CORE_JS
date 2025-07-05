@@ -1,0 +1,77 @@
+        <!DOCTYPE html>
+        <html>
+            <head>
+                <title>Variables</title>
+                <style>
+                </style>
+            </head>
+            <body>
+                <h1>ROCK PAPER SCISSORS</h1>
+                <button onclick="
+                    pickComputerMove();
+                    playGame('rock');
+                ">Rock</button>
+                <button onclick="
+
+                pickComputerMove();
+                playGame('paper');
+                    
+                ">Paper</button>
+                    <button onclick="
+                        pickComputerMove();
+                        playGame('scissor');
+                       
+                    ">Scissor</button>
+
+                    
+                <script>
+                        
+                        let computerMove='';
+                        let result='';
+                        function pickComputerMove(){
+                            const randomNumber=Math.random();
+                            
+                            if(randomNumber>0 && randomNumber<1/3){
+                            computerMove='ROCK';
+                        }else if(randomNumber>=1/3 && randomNumber<2/3){
+                            computerMove='PAPER';
+                        }else if(randomNumber>=2/3 && randomNumber<1){
+                            computerMove='SCISSOR';
+                        }}
+
+                        function playGame(playerMove){
+                            if(playerMove==='scissor'){
+                                if(computerMove=='ROCK'){
+                                    result='YOU LOSE';
+                                }else if(computerMove=='PAPER'){
+                                    result='YOU WIN';
+                                }else if(computerMove=='SCISSOR'){
+                                    result='THERE IS A TIE';
+                                }
+                            }else if(playerMove==='paper'){
+                                    if(computerMove=='ROCK'){
+                                    result='YOU WIN';
+                                }else if(computerMove=='PAPER'){
+                                    result='THERE IS A TIE';
+                                }else if(computerMove=='SCISSOR'){
+                                    result='YOU LOSE';
+                                }
+                            }else if(playerMove==='rock'){
+                                    if(computerMove=='ROCK'){
+                                    result='There is a Tie';
+                                }else if(computerMove=='PAPER'){
+                                    result='YOU LOSE';
+                                }else if(computerMove=='SCISSOR'){
+                                    result='YOU WIN';
+                                }
+                            }
+
+
+                           
+                            alert(`YOU PIC ${playerMove}. COMPUTER PICK ${computerMove}. ${result}`);
+                        }
+
+                        
+                </script>
+            </body>
+        </html>

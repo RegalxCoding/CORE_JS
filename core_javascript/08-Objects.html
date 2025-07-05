@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>08-OBJECTS</title>
+</head>
+<body>
+    <script>
+         const product={
+            name: 'socks',
+            price: 1090,
+            //obj inside obj
+            rating:{
+                stars:4.5,
+                count:97
+            },
+            //fun inside obj
+            fun: function func1(){
+                console.log('function inside object');
+            }
+         };
+         /*
+         console.log(product);
+         console.log(product.name);
+         console.log(product.price);
+
+         product.name ='cotton socks';
+         console.log(product);
+
+         product.newProperty=true;
+         console.log(product);
+
+         delete product.newProperty;
+         console.log(product);     
+
+         console.log(product.rating.stars);
+         product.fun();
+
+         //JSON OBJ let you convert j.s obj into JSON
+         console.log(JSON.stringify(product) );
+         */
+        console.log('rushabh'.length);
+        console.log('rushabh'.toUpperCase());
+        
+
+        //objects are reference
+        let obj1={
+            msg:'hello'
+        };
+
+        console.log(obj1);
+
+        let obj2=obj1;
+        console.log(obj2);
+
+       obj1.msg='good job!';
+        console.log(obj2);
+        console.log(obj1);
+
+        const obj3={
+            msg:'good job!'
+        }
+        console.log(obj3===obj1);//false
+        console.log(obj2===obj1);//true
+    </script>
+</body>
+</html>                                                        
