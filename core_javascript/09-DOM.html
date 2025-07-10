@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>09-DOM</title>
+  </head>
+  <body>
+    <button>HELLO</button>
+    <button class="js-button">SECOND BUTTON</button>
+    <script>
+      //querySelector()- get any element from pg and put sinside js
+      console.log(document.querySelector("button").innerHTML);
+      document.querySelector("button").innerHTML = "Changed";
+      //console.log(document.querySelector('button'));
+
+      const buttonElement = document.querySelector(".js-button");
+      console.log(buttonElement);
+
+      /*
+        console.log(document.title);
+        document.title='DOCUMENT OBJECT MODEL';
+
+        console.log(document.body);
+        console.log(typeof document.body);
+        */
+    </script>
+  </body>
+</html>
