@@ -5,19 +5,22 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>11-TODO-LIST</title>
-    <style>
-        
-    </style>
+    <link rel="stylesheet" href="./styles/11-todo-list.css">
+    
 </head>
 
 <body>
     <h2>TODO LIST PRACTICE 1</h2>
-    <input placeholder="TODO NAME" class="js-name-input" onkeydown="handlekeydown(event);">
+    <div class="todo-input-grid">
+        <input placeholder="TODO NAME" class="js-name-input name-input" onkeydown="handlekeydown(event);">
+
+    <input type="date" class="js-due-date-input due-date-input">
     <button onclick="
         addTodo();
-    ">Add</button>
-    
+    " class="add">Add</button>
+    </div>
     <div class="js-todo-list"></div>
+
    <script src="./scripts/11-todo-list.js">
         
    </script>
