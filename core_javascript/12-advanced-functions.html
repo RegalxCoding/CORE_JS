@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>12-ADVANCED FUNCTIONS</title>
+    <style>
+        
+    </style>
+</head>
+
+<body>
+   <button onclick="
+      
+      "class="js-button">Click</button>
+   <script> 
+
+   const buttonElement=document.querySelector('.js-button');
+
+   buttonElement.addEventListener('click', ()=>{
+      console.log('clicked');
+   });
+
+   const eventListner=()=>{
+      console.log('clicked2');
+   }
+   buttonElement.addEventListener('click',eventListner);
+
+   buttonElement.removeEventListener('click',eventListner)
+   /*                   
+      function greeting(){
+        console.log('hello');
+        
+      }
+      greeting();
+
+      //Method
+      const obj1={
+         num:2,
+         fun:function greet(){
+            console.log('hello dev');
+         }
+      }
+      obj1.fun();
+
+      //Passing value inside a function
+      function display(num){
+         console.log(num);
+      }
+      display(33);
+
+      //function inside function
+      function run(param){
+         console.log(param);
+      }
+      run(function(){
+         console.log("function inside function ");
+      })
+
+      //setTimeOut()
+      setTimeout(function(){
+         console.log('timeout');
+      },4000);//this function will run after 4 sec and for once
+
+      console.log('today is mon');
+
+      //setInterval
+      // setInterval(function(){
+      //    console.log('interval')
+      // },3000);//this function will run every time after 3 sec in future
+
+      console.log('21.07.2025');
+
+*/
+// [
+//    'make dinner',
+//    'wash dishes',
+//    'watch yt'
+// ].forEach((value,index)=>{
+//    if(value==='wash dishes'){
+//       return;//end this fun early and go onto next function does same as continue 
+//    }
+//    console.log(index);
+//    console.log(value);
+// });
+
+// /*ARROW FUNCTIONS: works same as regular function
+//       just instead of using funcction arrow function uses '=>'
+// */
+
+// const regularFunction=function(){
+//    console.log('hello');
+// }
+// regularFunction();
+ 
+// const arrowFunction=()=>{
+//    console.log('hello');
+// };
+// arrowFunction();
+
+// //SOME KEY DIFFERENCES
+
+// //1.here there is only one paramater so no need to use round brackets
+// const oneParam=param=>{
+//    console.log(param+1);
+// }
+// oneParam(2);
+
+// //2.everything we write on one line so no need to use curly brackets '{}'
+// const oneLine=()=>console.log(4+3);
+// oneLine();
+
+// // const object2={
+// //    method:()=>{
+
+// //    },
+// //    method(){
+
+// //    }//shorthand method syntax
+// };
+
+   </script>
+</body>
+
+</html>

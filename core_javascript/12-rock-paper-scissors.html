@@ -1,0 +1,64 @@
+            <!DOCTYPE html>
+            <html>
+            <head>
+            <title>Variables</title>
+           <link rel="stylesheet" href="./styles/12-rock-paper-scissors.css">
+            </head>
+            <body>
+            <h1 class="title">ROCK PAPER SCISSORS</h1>
+            <button
+            onclick="
+                pickComputerMove();
+                
+                
+            " class="move-button js-rock-button">
+
+            <img src="./IMAGES/rock-emoji.png" class="move-icon">
+
+            </button>
+            <button
+            onclick="
+
+            pickComputerMove();
+            playGame('paper');
+                
+            "class="move-button"
+            >
+            <img src="./IMAGES/paper-emoji.png" class="move-icon">
+            </button>
+            <button
+            onclick="
+                    pickComputerMove();
+                    playGame('scissors');
+                    
+                "class="move-button"
+            >
+            <img src="./IMAGES/scissors-emoji.png" class="move-icon">
+            </button>
+
+            <p class="js-result result" ></p>
+            <p class="js-moves"> 
+            </p>
+            <p class="js-score score"></p>
+            <button
+            onclick="
+                score.wins=0;
+                score.losses=0;
+                score.tie=0;
+                localStorage.removeItem('score');
+
+                updateScoreElement();
+            " class="reset-score-button"
+            >
+            Reset Score
+            </button>
+
+            <button class="auto-play-button" onclick="
+                autoPlay();
+            ">Auto Play</button>
+
+            <script src="./scripts/12-rock-paper-scissors.js">
+            
+            </script>
+            </body>
+            </html>
