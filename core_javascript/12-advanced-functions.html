@@ -15,7 +15,7 @@
       
       "class="js-button">Click</button>
    <script> 
-
+/*
    const buttonElement=document.querySelector('.js-button');
 
    buttonElement.addEventListener('click', ()=>{
@@ -28,6 +28,7 @@
    buttonElement.addEventListener('click',eventListner);
 
    buttonElement.removeEventListener('click',eventListner)
+   */
    /*                   
       function greeting(){
         console.log('hello');
@@ -119,6 +120,20 @@
 
 // //    }//shorthand method syntax
 // };
+
+console.log([1,-3,5].filter((value,index)=>{
+   if(value>=0){
+   return true;}
+   else{
+      return false;
+   }
+}));
+
+console.log([1,2,3].map((value, index)=>{
+   if(value>=0){
+      return value*value;
+   }
+}));
 
    </script>
 </body>
